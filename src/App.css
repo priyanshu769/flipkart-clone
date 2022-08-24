@@ -12,3 +12,14 @@
 .App {
     font-family: 'Roboto', sans-serif;
 }
+
+.navbar {
+    height: fit-content;
+    width: auto;
+    padding: 1rem;
+    background-color: var(--primary-color);
+}
+
+.logoImg{
+    max-width: 5rem;
+}
