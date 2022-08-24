@@ -1,0 +1,11 @@
+.sortBtn {
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--white);
+    border: none;
+    background-color: var(--primary-color);
+    margin: 0.5rem;
+}
+.sortBtn:hover {
+    box-shadow: 3px 3px 2px var(--off-grey);
+}

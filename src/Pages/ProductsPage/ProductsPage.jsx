@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './ProductsPage.css'
-import { ProductCard, BrandFilterSelector } from '../../Components'
+import { ProductCard, BrandFilterSelector, SortButton } from '../../Components'
 import { products, sortProductsByPrice, filterByIdealFor, addRemoveBrandFromFilter, filterByBrand, filterBySize } from '../../Utils'
 
 export const ProductsPage = () => {
@@ -10,15 +10,30 @@ export const ProductsPage = () => {
     const [sizeFilter, setSizeFilter] = useState(null)
     const allSizes = ['S', 'M', 'L', 'XL']
     const productsToDisplay = sortProductsByPrice(filterByIdealFor(filterByBrand(filterBySize(products, sizeFilter), brandsFilter), idealFor), sortType)
+    const clearBtnHandler = () => {
+        setSortType(null)
+        setIdealFor(null)
+        setBrandsFilter([])
+        setSizeFilter(null)
+    }
     return (
         <div className='sortAndProductsContainer'>
             <div className='sortFiltersContainer'>
                 <h2>Sort and Filters</h2>
+                <SortButton
+                    btnName='Clear All'
+                    onClick={clearBtnHandler}
+                />
                 <div className='priceSort'>
                     <h3>Sort by Price</h3>
-                    <button onClick={() => setSortType('low to high')}>Price: Low to High</button>
-                    <br />
-                    <button onClick={() => setSortType('high to low')}>Price: High to Low</button>
+                    <SortButton
+                        btnName='Price: Low to High'
+                        onClick={() => setSortType('low to high')}
+                    />
+                    <SortButton
+                        btnName='Price: High to Low'
+                        onClick={() => setSortType('high to low')}
+                    />
                 </div>
                 <div className='filterByIdealForContainer'>
                     <h3>Ideal For</h3>

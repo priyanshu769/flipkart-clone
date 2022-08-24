@@ -1,7 +1,11 @@
 .productCard {
     width: 16rem;
+    border: 1px solid var(--white);
+}
+
+.productCard:hover {
     border: 1px solid var(--off-white);
-    box-shadow: 2px 3px 3px var(--off-white);
+    box-shadow: 7px 5px 5px var(--off-grey);
 }
 
 .productImg {
