@@ -1,0 +1,13 @@
+.sortAndProductsContainer {
+    display: flex;
+}
+
+.sortFiltersContainer {
+    width: 20rem;
+}
+
+.productsContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
