@@ -1,6 +1,8 @@
 .productCard {
     width: 16rem;
     border: 1px solid var(--white);
+    padding: 0.5rem;
+    margin: 1rem;
 }
 
 .productCard:hover {
@@ -13,4 +15,20 @@
     max-width: 100%;
     max-height: 20rem;
     margin: auto;
+}
+
+.productBrandName {
+    color: var(--off-grey);
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.productName {
+    font-weight: 400;
+}
+
+.prodcutPrice {
+    font-size: larger;
+    font-weight: 900;
+    margin: 0;
 }
