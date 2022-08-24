@@ -10,6 +10,10 @@
     box-shadow: 7px 5px 5px var(--off-grey);
 }
 
+.productImgContainer {
+    height: 20rem;
+}
+
 .productImg {
     display: block;
     max-width: 100%;
@@ -18,7 +22,7 @@
 }
 
 .productBrandName {
-    color: var(--off-grey);
+    color: var(--dark-grey);
     font-weight: 700;
     margin-bottom: 0;
 }
